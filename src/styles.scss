@@ -1,0 +1,134 @@
+/* You can add global styles to this file, and also import other style files */
+$white: #ffffff;
+$base-blue: #659DBD;
+$base-blue-hover: #83bbdb;
+
+$btn-border-radius: 8px;
+
+html, body {
+    height: 100%;
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    height: 40px;
+    border-radius: $btn-border-radius;
+    min-width: 80px;
+    box-sizing: border-box;
+    padding: 8px;
+    font-weight: 600;
+
+
+    &-full-width {
+        width: 100%;
+    }
+
+    &-group {
+        // width: 100%;
+        margin-top: 10px;
+
+        & > .btn {
+            &:first-child:not(:last-child) {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            &:last-child:not(:first-child) {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
+
+    &-primary {
+        background: $base-blue;
+        color: $white;
+        border: 1px solid $base-blue;
+
+        &:hover {
+            background: $base-blue-hover;
+            border-color: $base-blue-hover;
+        }
+
+        &-outline {
+            background: none;
+            color: $base-blue;
+            border: 1px solid $base-blue;
+
+            &:hover {
+                background: $base-blue-hover;
+                color: $white;
+                border-color: $base-blue-hover;
+            }
+        }
+    }
+
+    &-white {
+        
+        &-outline {
+            border: 1px solid $white;
+            color: $white;
+            background-color: transparent;
+
+            &:hover {
+                background-color: $white;
+                color: $base-blue;
+            }
+        }
+    }
+}
+
+.input {
+    border: 1px solid #7bb5f3;
+    border-radius: 4px;
+    color: #659DBD;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 6px;
+    display: block;
+    width: 100%;
+    background: #fff;
+    font-size: 14px;
+    outline: 0;
+    box-sizing: border-box;
+
+    &:hover {
+        border-color: #f8d473;
+    }
+
+    &:focus {
+        border-color: #ffc18f;
+    }
+
+    &::placeholder {
+        font-weight: 300;
+        color: #c6deea;
+    }
+
+    .input-container--error & {
+        border-color: #f12e3e;
+    }
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #659DBD;
+
+    .input-container--error & {
+        color: #f12e3e;
+    }
+}

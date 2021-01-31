@@ -1,0 +1,16 @@
+<div class="btn-group">
+  <button *ngIf="actionVisible"
+          [class.btn-full-width]="!cancelVisible"
+          [attr.form]="id"
+          type="submit"
+          class="btn btn-primary"
+          (click)="onSave(); save.emit(null)">
+    {{ actionLabel }}
+  </button>
+  <button *ngIf="cancelVisible"
+          class="btn btn-primary-outline"
+          type="button"
+          (click)="onCancel(); cancel.emit(null)">
+    {{ cancelLabel }}
+  </button>
+</div>

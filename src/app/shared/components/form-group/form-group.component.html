@@ -1,0 +1,6 @@
+<form [formGroup]="formGroup"
+      (ngSubmit)="onSubmit()"
+      [attr.id]="id"
+      (submit)="$event.stopPropagation()">
+  <ng-content></ng-content>
+</form>

@@ -1,0 +1,18 @@
+<div [ngSwitch]="state$ | async" class="flex-container">
+  <div *ngSwitchCase="'loading'">
+    <app-test-loading></app-test-loading>
+  </div>
+  <div *ngSwitchCase="'loaded'"
+       class="message">
+    Loaded
+  </div>
+  <div *ngSwitchCase="'error'"
+       class="message message-error">
+    An Unknown Error has Occured
+  </div>
+</div>
+
+<app-test-card>
+  <app-test-submitted-data></app-test-submitted-data>
+</app-test-card>
+<app-test-user-profile></app-test-user-profile>

@@ -1,0 +1,28 @@
+<app-test-card>
+  <div class="flex-container">
+    <div>
+      <h1>Login</h1>
+    </div>
+    <app-test-form-group *ngIf="form"
+                         [formGroup]="form"
+                         (submit)="onLogin()">
+      <app-test-input-container label="Email"
+                                [control]="form.get('email')">
+        <input type="email"
+               placeholder="han@solo.com"
+               [formControl]="form.get('email')"
+               appTestInput>
+      </app-test-input-container>
+
+      <app-test-input-container label="Password"
+                                [control]="form.get('password')">
+        <input type="password"
+               placeholder="your password here..."
+               formControlName="password"
+               appTestInput>
+      </app-test-input-container>
+      <app-test-form-actions actionLabel="Login"
+                             [cancelVisible]="false"></app-test-form-actions>
+    </app-test-form-group>
+  </div>
+</app-test-card>

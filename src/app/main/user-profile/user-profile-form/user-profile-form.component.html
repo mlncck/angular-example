@@ -1,0 +1,42 @@
+<div class="flex-container">
+
+  <div>
+    <h1>User Profile Form</h1>
+  </div>
+
+  <app-test-form-group *ngIf="form"
+                       [formGroup]="form"
+                       (submit)="onSubmit()"
+                       (cancel)="onReset()"
+                       style="width: 500px;">
+
+    <app-test-input-container label="Name"
+                              [control]="form.get('name')">
+      <input type="text"
+             placeholder="Han Solo"
+             [formControl]="form.get('name')"
+             appTestInput>
+    </app-test-input-container>
+
+    <app-test-input-container label="Email"
+                              [control]="form.get('email')">
+      <input type="email"
+             placeholder="han@solo.com"
+             [formControl]="form.get('email')"
+             appTestInput>
+    </app-test-input-container>
+
+    <app-test-input-container label="Phone Number"
+                              [control]="form.get('phoneNumber')">
+      <input type="text"
+             placeholder="+ 1 555 555 5555"
+             formControlName="phoneNumber"
+             appTestInput>
+    </app-test-input-container>
+
+    <app-test-form-actions actionLabel="Submit"
+                           cancelLabel="Reset"
+                           class="form-actions"></app-test-form-actions>
+
+  </app-test-form-group>
+</div>
