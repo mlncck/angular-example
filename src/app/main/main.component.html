@@ -1,4 +1,5 @@
-<div [ngSwitch]="state$ | async" class="flex-container">
+<div [ngSwitch]="state$ | async"
+     class="flex-container">
   <div *ngSwitchCase="'loading'">
     <app-test-loading></app-test-loading>
   </div>

@@ -30,7 +30,7 @@ export class LocalStorageUtil {
 
 // If there is any default value assigned to property (=) it will change value of LocalStorage data!!!
 export function LocalStorage<T>(key: string, defaultValue: T) {
-  return function (target: any, propertyName: string) {
+  return function(target: any, propertyName: string) {
     Object.defineProperty(target, propertyName, {
       ...target[propertyName],
       get(): T | unknown {

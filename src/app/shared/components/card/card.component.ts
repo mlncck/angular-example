@@ -1,4 +1,9 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input, HostBinding } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-test-card',

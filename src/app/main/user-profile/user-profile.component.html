@@ -4,11 +4,10 @@
     <app-test-submitted-data></app-test-submitted-data>
 
     <div class="line"></div>
-<div class="form-content">
-  <app-test-user-profile-form *ngIf="!(userProfileService.userProfileDataSubmitted$ | async); else dataSubmitted"
-                              >
-  </app-test-user-profile-form>
-</div>
+    <div class="form-content">
+      <app-test-user-profile-form *ngIf="!(userProfileService.userProfileDataSubmitted$ | async); else dataSubmitted">
+      </app-test-user-profile-form>
+    </div>
   </div>
 </app-test-card>
 
@@ -37,7 +36,7 @@
                 fill="#dfebf1" />
         </g>
       </svg>
-  
+
       <h1>Data submitted</h1>
     </div>
     <button class="btn btn-primary submitted-button"

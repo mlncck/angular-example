@@ -1,7 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy, OnDestroy, ChangeDetectorRef } from '@angular/core';
-import { Subscription, BehaviorSubject } from 'rxjs';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { UserProfileService } from './user-profile.service';
-import { unsubscribe } from '../../shared/utils/angular.utils';
 
 export interface UserProfileData {
   name: string;

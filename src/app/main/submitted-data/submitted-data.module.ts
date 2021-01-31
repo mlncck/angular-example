@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { SubmittedDataComponent } from './submitted-data.component';
-import { SharedModule } from '../../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { SharedModule } from '../../shared/shared.module';
+import { SubmittedDataComponent } from './submitted-data.component';
 
 const COMPONENTS = [
   SubmittedDataComponent

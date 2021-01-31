@@ -1,7 +1,13 @@
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { BehaviorSubject, Subscription } from 'rxjs';
-import { unsubscribe } from '../shared/utils/angular.utils';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+  OnInit
+} from '@angular/core';
 import { LoadingState } from './user-profile/user-profile.component';
+import { unsubscribe } from '../shared/utils/angular.utils';
 import { UserProfileService } from './user-profile/user-profile.service';
 
 @Component({

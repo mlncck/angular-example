@@ -1,5 +1,12 @@
-import { Directive, Input, Renderer2, OnInit, ElementRef, HostBinding } from '@angular/core';
 import * as uuid from 'uuid';
+import {
+  Directive,
+  ElementRef,
+  HostBinding,
+  Input,
+  OnInit,
+  Renderer2
+} from '@angular/core';
 
 @Directive({
   selector: 'input[appTestInput]',
@@ -31,5 +38,5 @@ export class InputDirective implements OnInit {
 
   ngOnInit() {
     this.renderer.addClass(this.elementRef.nativeElement, this.className);
-  } 4
+  }
 }

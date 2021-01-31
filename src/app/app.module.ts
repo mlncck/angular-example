@@ -4,13 +4,13 @@ import { AuthModule } from './auth/auth.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginModule } from './login/login.module';
 import { MainModule } from './main/main.module';
 import { NgModule } from '@angular/core';
+import { RequestInterceptor } from './request.interceptor';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { RequestInterceptor } from './request.interceptor';
 
 @NgModule({
   declarations: [

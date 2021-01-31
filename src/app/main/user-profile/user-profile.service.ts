@@ -1,9 +1,9 @@
+import { BehaviorSubject, forkJoin, throwError } from 'rxjs';
+import { catchError, concatMap, tap } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, forkJoin, throwError } from 'rxjs';
-import { UserProfileData } from './user-profile.component';
-import { concatMap, tap, catchError } from 'rxjs/operators';
 import { SubmittedDataFormat } from '../submitted-data/submitted-data.component';
+import { UserProfileData } from './user-profile.component';
 
 
 
@@ -20,7 +20,6 @@ export class UserProfileService {
   resetForm() {
     this.userProfileDataSubmitted$.next(false);
     this.userProfileData$.next([]);
-    console.log()
   }
 
   sendUserProfileData(body: UserProfileData) {
@@ -64,5 +63,5 @@ export class UserProfileService {
   }
 }
 
-const GET_BASE_URL = 'https://www.swapi.tech/api'
-const POST_BASE_URL = 'https://jsonplaceholder.typicode.com'
+const GET_BASE_URL = 'https://www.swapi.tech/api';
+const POST_BASE_URL = 'https://jsonplaceholder.typicode.com';

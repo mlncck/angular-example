@@ -1,5 +1,11 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input, HostBinding } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostBinding,
+  Input,
+  OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-test-input-container',

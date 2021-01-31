@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
 import { LocalStorage } from '../shared/utils/local-storage.utils';
+import { Subject } from 'rxjs';
 import { UserProfileService } from '../main/user-profile/user-profile.service';
 
 export interface LoginData {
@@ -18,7 +18,7 @@ export class AuthService {
 
   authChanged$ = new Subject();
 
-  constructor(private userProfileService: UserProfileService) {}
+  constructor(private userProfileService: UserProfileService) { }
 
   getIsAuthenticated() {
     return this.isAuthenticated;
